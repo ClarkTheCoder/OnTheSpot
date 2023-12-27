@@ -13,6 +13,7 @@
 		670C6ADF2B3BFA32002F9EEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670C6ADE2B3BFA32002F9EEB /* Preview Assets.xcassets */; };
 		670C6AE82B3BFBE9002F9EEB /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C6AE72B3BFBE9002F9EEB /* Scenario.swift */; };
 		670C6AEB2B3BFD24002F9EEB /* ScenarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */; };
+		676AF1CB2B3C0AA0009CD98B /* ScenarioBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		670C6ADE2B3BFA32002F9EEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		670C6AE72B3BFBE9002F9EEB /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
 		670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewModel.swift; sourceTree = "<group>"; };
+		676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		670C6AE62B3BFBC9002F9EEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */,
 				670C6AE72B3BFBE9002F9EEB /* Scenario.swift */,
 			);
 			path = Model;
@@ -170,6 +173,7 @@
 				670C6AE82B3BFBE9002F9EEB /* Scenario.swift in Sources */,
 				670C6ADA2B3BFA31002F9EEB /* ContentView.swift in Sources */,
 				670C6AEB2B3BFD24002F9EEB /* ScenarioViewModel.swift in Sources */,
+				676AF1CB2B3C0AA0009CD98B /* ScenarioBrain.swift in Sources */,
 				670C6AD82B3BFA31002F9EEB /* On_The_SpotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
