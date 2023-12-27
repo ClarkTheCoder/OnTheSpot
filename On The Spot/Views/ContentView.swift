@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
+    
     var body: some View {
         ZStack {
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+                Text("Scenario: ")
+                    .padding(.top, 15)
+                    
+                Text(scenarioVM.currentScenario.question)
+                    .padding(.top, 15)
+                
+                Button("Next Scenario") {
+                    print("test")
+                }
+                Spacer()
             }
             .padding()
         }
