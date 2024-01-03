@@ -19,8 +19,10 @@ struct ContentView: View {
                 Text(scenarioVM.currentScenario.question)
                     .padding(.top, 15)
                 
-                Button("Next Scenario") {
-                    print("test")
+                Spacer()
+                Button("Next") {
+                    scenarioVM.nextScenario()
+                    print("Button clicked")
                 }
                 Spacer()
             }
