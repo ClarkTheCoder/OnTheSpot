@@ -18,11 +18,12 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Text("Scenario: ")
-                    .padding(.top, 15)
-                    
                 Text(scenarioVM.currentScenario.question)
-                    .padding(.top, 15)
+                    .padding(15)
+                    .background(
+                        Color.blue,
+                        in: RoundedRectangle(cornerRadius: 10)
+                    )
                 
                 Spacer()
                 Button("Next") {
