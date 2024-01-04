@@ -12,6 +12,11 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            Image("background-main")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+            
             VStack {
                 Text("Scenario: ")
                     .padding(.top, 15)
