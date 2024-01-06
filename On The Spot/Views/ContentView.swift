@@ -21,42 +21,56 @@ extension Color {
 }
 
 struct ContentView: View {
+    @State private var isLoading = true
     
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
-        ZStack {
-            Image("background-main")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .ignoresSafeArea()
-            VStack {
-                Spacer()
-                Text("On The Spot 😅")
-                    .font(.custom("Pacifico-Regular", size: 27))
-                    .foregroundStyle(Color(hex: 0x1747))
-                
-                VStack {
-                    Text(scenarioVM.currentScenario.question)
-                        .padding(15)
-                        .foregroundStyle(Color(hex: 0x1747))
+        VStack {
+            if isLoading {
+                LoadingView()
+                    .onAppear {
+                    Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { timer in
+                        isLoading = false
+                        timer.invalidate()
+                    }
                 }
-                .frame(height: 175)
-                
-                Button("Next") {
-                    scenarioVM.nextScenario()
-                    print("Button clicked")
+            } else {
+                ZStack {
+                    Image("background-main")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .ignoresSafeArea()
+                    VStack {
+                        Spacer()
+                        Text("On The Spot 😅")
+                            .font(.custom("Pacifico-Regular", size: 27))
+                            .foregroundStyle(Color(hex: 0x1747))
+                        
+                        VStack {
+                            Text(scenarioVM.currentScenario.question)
+                                .padding(15)
+                                .foregroundStyle(Color(hex: 0x1747))
+                        }
+                        .frame(height: 175)
+                        
+                        Button("Next") {
+                            scenarioVM.nextScenario()
+                            print("Button clicked")
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
+                        .foregroundColor(.white)
+                        .padding(.init(top: 10, leading: 70, bottom: 10, trailing: 70))
+                        .background(
+                            RoundedRectangle(cornerRadius: 50)
+                                .fill(Color(hex: 0xA8DB))
+                        )
+                        Spacer()
+                    }
+                    .padding()
                 }
-                .fixedSize(horizontal: false, vertical: true)
-                .foregroundColor(.white)
-                .padding(.init(top: 10, leading: 70, bottom: 10, trailing: 70))
-                .background(
-                    RoundedRectangle(cornerRadius: 50)
-                        .fill(Color(hex: 0xA8DB))
-                )
-                Spacer()
+                
             }
-            .padding()
         }
     }
 }
