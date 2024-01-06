@@ -7,7 +7,21 @@
 
 import SwiftUI
 
+extension Color {
+    
+    init(hex: UInt, alpha: Double = 1.0) {
+        self.init(
+            .sRGB,
+            red: Double((hex >> 16) & 0xFF) / 255.0,
+            green: Double((hex >> 8) & 0xFF) / 255.0,
+            blue: Double(hex & 0xFF) / 255.0,
+            opacity: alpha
+        )
+    }
+}
+
 struct ContentView: View {
+    
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
@@ -16,20 +30,30 @@ struct ContentView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
-            
             VStack {
-                Text(scenarioVM.currentScenario.question)
-                    .padding(15)
-                    .background(
-                        Color.blue,
-                        in: RoundedRectangle(cornerRadius: 10)
-                    )
-                
                 Spacer()
+                Text("On The Spot 😅")
+                    .font(.custom("Pacifico-Regular", size: 27))
+                    .foregroundStyle(Color(hex: 0x1747))
+                
+                VStack {
+                    Text(scenarioVM.currentScenario.question)
+                        .padding(15)
+                        .foregroundStyle(Color(hex: 0x1747))
+                }
+                .frame(height: 175)
+                
                 Button("Next") {
                     scenarioVM.nextScenario()
                     print("Button clicked")
                 }
+                .fixedSize(horizontal: false, vertical: true)
+                .foregroundColor(.white)
+                .padding(.init(top: 10, leading: 70, bottom: 10, trailing: 70))
+                .background(
+                    RoundedRectangle(cornerRadius: 50)
+                        .fill(Color(hex: 0xA8DB))
+                )
                 Spacer()
             }
             .padding()

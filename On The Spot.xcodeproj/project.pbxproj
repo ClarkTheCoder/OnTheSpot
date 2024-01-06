@@ -13,6 +13,7 @@
 		670C6ADF2B3BFA32002F9EEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670C6ADE2B3BFA32002F9EEB /* Preview Assets.xcassets */; };
 		670C6AE82B3BFBE9002F9EEB /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C6AE72B3BFBE9002F9EEB /* Scenario.swift */; };
 		670C6AEB2B3BFD24002F9EEB /* ScenarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */; };
+		67459ADC2B49AEB900CF71C6 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67459ADB2B49AEB900CF71C6 /* Pacifico-Regular.ttf */; };
 		676AF1CB2B3C0AA0009CD98B /* ScenarioBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,8 @@
 		670C6ADE2B3BFA32002F9EEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		670C6AE72B3BFBE9002F9EEB /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
 		670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewModel.swift; sourceTree = "<group>"; };
+		67459ADB2B49AEB900CF71C6 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		67459ADD2B49B0B100CF71C6 /* On-The-Spot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "On-The-Spot-Info.plist"; sourceTree = SOURCE_ROOT; };
 		676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +60,8 @@
 		670C6AD62B3BFA31002F9EEB /* On The Spot */ = {
 			isa = PBXGroup;
 			children = (
+				67459ADD2B49B0B100CF71C6 /* On-The-Spot-Info.plist */,
+				67459ADA2B49AE9800CF71C6 /* Fonts */,
 				670C6AD72B3BFA31002F9EEB /* On_The_SpotApp.swift */,
 				670C6AE92B3BFD10002F9EEB /* ViewModel */,
 				670C6AE62B3BFBC9002F9EEB /* Model */,
@@ -98,6 +103,14 @@
 				670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		67459ADA2B49AE9800CF71C6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				67459ADB2B49AEB900CF71C6 /* Pacifico-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67459ADC2B49AEB900CF71C6 /* Pacifico-Regular.ttf in Resources */,
 				670C6ADF2B3BFA32002F9EEB /* Preview Assets.xcassets in Resources */,
 				670C6ADC2B3BFA32002F9EEB /* Assets.xcassets in Resources */,
 			);
@@ -311,6 +325,7 @@
 				DEVELOPMENT_TEAM = KYS955CYLL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "On-The-Spot-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -340,6 +355,7 @@
 				DEVELOPMENT_TEAM = KYS955CYLL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "On-The-Spot-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
