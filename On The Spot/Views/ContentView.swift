@@ -53,8 +53,8 @@ struct ContentView: View {
                         }
                         .frame(height: 105)
                         
-                        NavigationButton(buttonText: "Next", action: scenarioVM.nextScenario)
-                        NavigationButton(buttonText: "Back", action: scenarioVM.previousScenario)
+                        NavigationButton(buttonText: "Next", action: scenarioVM.nextScenario, buttonColor: Color(hex: 0xA8DB))
+                        NavigationButton(buttonText: "Back", action: scenarioVM.previousScenario, buttonColor: Color(hex: 0x1747))
                         
                         Spacer()
                     }
@@ -68,6 +68,7 @@ struct ContentView: View {
 struct NavigationButton: View {
     let buttonText: String
     let action: () -> Void
+    let buttonColor: Color?
     
     var body: some View {
         Button(buttonText) {
@@ -78,7 +79,7 @@ struct NavigationButton: View {
         .padding(.init(top: 10, leading: 90, bottom: 10, trailing: 90))
         .background(
             RoundedRectangle(cornerRadius: 50)
-                .fill(Color(hex: 0xA8DB))
+                .fill(buttonColor!)
         )
     }
 }
