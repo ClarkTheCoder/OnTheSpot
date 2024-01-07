@@ -28,4 +28,10 @@ class ScenarioViewModel: ObservableObject {
             currentScenarioIndex = 0
         }
     }
+    
+    func previousScenario() {
+        if currentScenarioIndex < scenarios.count - 1 {
+            currentScenarioIndex -= 1
+        }
+    }
 }

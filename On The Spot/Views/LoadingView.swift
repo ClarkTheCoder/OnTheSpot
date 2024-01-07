@@ -7,21 +7,24 @@
 
 import SwiftUI
 
-extension String {
-    subscript(offset: Int) -> Character {
-        self[index(startIndex, offsetBy: offset)]
-    }
-}
-
 struct LoadingView: View {
     let textToType = "It's about to get uncomfortable.."
     @State private var animatedText: String = ""
     
     var body: some View {
         ZStack {
+            Image("loading-background")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
             VStack {
                 Text("On The Spot 😅")
+                    .font(.custom("Pacifico-Regular", size: 40))
+                    .padding(5)
+                    .foregroundStyle(.white)
                 Text(animatedText)
+                    .font(.system(size: 20))
+                    .foregroundStyle(.white)
             }
             .onAppear{
                 animateText()
@@ -31,14 +34,13 @@ struct LoadingView: View {
     
     func animateText() {
         for (index, character) in textToType.enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.05) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.09) {
                 animatedText.append(character)
                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
             }
         }
     }
 }
-
 
 
 #Preview {

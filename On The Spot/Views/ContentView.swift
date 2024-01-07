@@ -22,7 +22,6 @@ extension Color {
 
 struct ContentView: View {
     @State private var isLoading = true
-    
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
@@ -44,7 +43,7 @@ struct ContentView: View {
                     VStack {
                         Spacer()
                         Text("On The Spot 😅")
-                            .font(.custom("Pacifico-Regular", size: 27))
+                            .font(.custom("Pacifico-Regular", size: 32))
                             .foregroundStyle(Color(hex: 0x1747))
                         
                         VStack {
@@ -52,29 +51,40 @@ struct ContentView: View {
                                 .padding(15)
                                 .foregroundStyle(Color(hex: 0x1747))
                         }
-                        .frame(height: 175)
+                        .frame(height: 105)
                         
-                        Button("Next") {
-                            scenarioVM.nextScenario()
-                            print("Button clicked")
-                        }
-                        .fixedSize(horizontal: false, vertical: true)
-                        .foregroundColor(.white)
-                        .padding(.init(top: 10, leading: 70, bottom: 10, trailing: 70))
-                        .background(
-                            RoundedRectangle(cornerRadius: 50)
-                                .fill(Color(hex: 0xA8DB))
-                        )
+                        NavigationButton(buttonText: "Next", action: scenarioVM.nextScenario)
+                        NavigationButton(buttonText: "Back", action: scenarioVM.previousScenario)
+                        
                         Spacer()
                     }
                     .padding()
                 }
-                
             }
         }
+    }
+}
+
+struct NavigationButton: View {
+    let buttonText: String
+    let action: () -> Void
+    
+    var body: some View {
+        Button(buttonText) {
+            action()
+        }
+        .fixedSize(horizontal: false, vertical: true)
+        .foregroundColor(.white)
+        .padding(.init(top: 10, leading: 90, bottom: 10, trailing: 90))
+        .background(
+            RoundedRectangle(cornerRadius: 50)
+                .fill(Color(hex: 0xA8DB))
+        )
     }
 }
 
 #Preview {
     ContentView()
 }
+
+
