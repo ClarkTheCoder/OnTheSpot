@@ -21,7 +21,7 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var isLoading = false
+    @State private var isLoading = true
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
@@ -43,7 +43,7 @@ struct ContentView: View {
                     VStack {
                         Spacer()
                         Text("On The Spot 😅")
-                            .font(.custom("Pacifico-Regular", size: 32))
+                            .font(.custom("Pacifico-Regular", size: 40))
                             .foregroundStyle(Color(hex: 0x1747))
                         
                         VStack {
@@ -66,6 +66,7 @@ struct ContentView: View {
 }
 
 struct NavigationButton: View {
+    
     let buttonText: String
     let action: () -> Void
     let buttonColor: Color?

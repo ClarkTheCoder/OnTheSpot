@@ -20,11 +20,16 @@ struct LoadingView: View {
             VStack {
                 Text("On The Spot 😅")
                     .font(.custom("Pacifico-Regular", size: 40))
-                    .padding(5)
+                    .padding(1)
                     .foregroundStyle(.white)
                 Text(animatedText)
                     .font(.system(size: 20))
                     .foregroundStyle(.white)
+
+                ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                    .padding()
+                    
+                
             }
             .onAppear{
                 animateText()
