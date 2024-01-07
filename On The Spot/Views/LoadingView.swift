@@ -28,8 +28,6 @@ struct LoadingView: View {
 
                 ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.white))
                     .padding()
-                    
-                
             }
             .onAppear{
                 animateText()
@@ -38,6 +36,7 @@ struct LoadingView: View {
     }
     
     func animateText() {
+        
         for (index, character) in textToType.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.09) {
                 animatedText.append(character)

@@ -21,7 +21,7 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var isLoading = true
+    @State private var isLoading = false
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
@@ -72,16 +72,17 @@ struct NavigationButton: View {
     let buttonColor: Color?
     
     var body: some View {
-        Button(buttonText) {
-            action()
-        }
-        .fixedSize(horizontal: false, vertical: true)
-        .foregroundColor(.white)
-        .padding(.init(top: 10, leading: 90, bottom: 10, trailing: 90))
-        .background(
-            RoundedRectangle(cornerRadius: 50)
-                .fill(buttonColor!)
-        )
+        
+        Button(action: action) {
+            Text(buttonText)
+                 .fixedSize(horizontal: false, vertical: true)
+                 .foregroundColor(.white)
+                 .padding(.init(top: 10, leading: 90, bottom: 10, trailing: 90))
+                 .background(
+                     RoundedRectangle(cornerRadius: 50)
+                         .fill(buttonColor!)
+                 )
+         }
     }
 }
 
