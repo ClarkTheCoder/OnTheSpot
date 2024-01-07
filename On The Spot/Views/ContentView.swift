@@ -21,7 +21,7 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var isLoading = true
+    @State private var isLoading = false
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
@@ -51,7 +51,7 @@ struct ContentView: View {
                                 .padding(15)
                                 .foregroundStyle(Color(hex: 0x1747))
                         }
-                        .frame(height: 105)
+                        .frame(height: 140)
                         
                         NavigationButton(buttonText: "Next", action: scenarioVM.nextScenario, buttonColor: Color(hex: 0xA8DB))
                         NavigationButton(buttonText: "Back", action: scenarioVM.previousScenario, buttonColor: Color(hex: 0x1747))
