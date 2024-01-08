@@ -26,7 +26,7 @@ struct ScenarioBrain {
         Scenario(question: "You are at a party and a friend offers you cocaine? You have not done it before. Do you try it once?"),
         Scenario(question: "While laying next to your partner in bed watching TikTok you come across a stunning influencer wearing very little clothing. Do you watch the clip?"),
         Scenario(question: "You are at a party and you spill beer on the hosts Xbox. Do you tell them?"),
-        Scenario(question: "You are in college with a paper this Friday. You are juggling 5 other courses and are tight on time. Do you use ChatGPT to complete the assignment?"),
+        Scenario(question: "You are in college with a paper due this Friday. You are enrolled in 5 other courses and are tight on time. Do you use ChatGPT to complete the assignment?"),
         Scenario(question: "You accept a date with a nice person when an even more attractive prospect becomes available. Do you cancel the first date?"),
     ]
 }
