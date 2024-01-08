@@ -51,8 +51,8 @@ struct ContentView: View {
                         }
                         .frame(height: 140)
                         
-                        NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302))
-                        NavigationButton(buttonText: "Back", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302))
+                        NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
+                        NavigationButton(buttonText: "Back", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
                         Spacer()
                     }
                     .padding()
@@ -65,10 +65,12 @@ struct ContentView: View {
 struct NavigationButtonStyle: ButtonStyle {
     var defaultColor: Color
     var tappedColor: Color
+    var textColorDefault: Color
+    var textColorTapped: Color
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .foregroundColor(.white)
+            .foregroundColor(configuration.isPressed ? textColorTapped : textColorDefault )
             .padding(.init(top: 10, leading: 90, bottom: 10, trailing: 90))
             .background(
                 RoundedRectangle(cornerRadius: 50)
@@ -82,13 +84,15 @@ struct NavigationButton: View {
     let action: () -> Void
     let defaultColor: Color
     let tappedColor: Color
+    var textColorDefault: Color
+    var textColorTapped: Color
 
     var body: some View {
         Button(action: action) {
             Text(buttonText)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .buttonStyle(NavigationButtonStyle(defaultColor: defaultColor, tappedColor: tappedColor))
+        .buttonStyle(NavigationButtonStyle(defaultColor: defaultColor, tappedColor: tappedColor, textColorDefault: textColorDefault, textColorTapped: textColorTapped))
     }
 }
 
