@@ -3,7 +3,6 @@
 //  On The Spot
 //
 //  Created by Carson Clark on 2023-12-26.
-//
 
 import SwiftUI
 
@@ -21,7 +20,7 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var isLoading = false
+    @State private var isLoading = true
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
