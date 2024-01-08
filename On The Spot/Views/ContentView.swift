@@ -46,7 +46,7 @@ struct ContentView: View {
                             .foregroundStyle(Color(hex: 0x1747))
                         VStack {
                             Text(scenarioVM.currentScenario.question)
-                                .padding(15)
+                                .padding(.horizontal, 30)
                                 .foregroundStyle(Color(hex: 0x1747))
                         }
                         .frame(height: 140)
@@ -66,6 +66,7 @@ struct ContentView: View {
 // MARK: - Button Styles
 
 struct NavigationButtonStyle: ButtonStyle {
+    
     var defaultColor: Color
     var tappedColor: Color
     var textColorDefault: Color
@@ -85,6 +86,7 @@ struct NavigationButtonStyle: ButtonStyle {
 //MARK: - SubViews
 
 struct NavigationButton: View {
+    
     let buttonText: String
     let action: () -> Void
     let defaultColor: Color
