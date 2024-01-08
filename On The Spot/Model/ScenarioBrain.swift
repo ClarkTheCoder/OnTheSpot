@@ -28,5 +28,6 @@ struct ScenarioBrain {
         Scenario(question: "You are at a party and you spill beer on the hosts Xbox. Do you tell them?"),
         Scenario(question: "You are in college with a paper due this Friday. You are enrolled in 5 other courses and are tight on time. Do you use ChatGPT to complete the assignment?"),
         Scenario(question: "You accept a date with a nice person when an even more attractive prospect becomes available. Do you cancel the first date?"),
+        Scenario(question: "You match with an attractive friend who your close friend has a big crush on. Do you unmatch?"),
     ]
 }

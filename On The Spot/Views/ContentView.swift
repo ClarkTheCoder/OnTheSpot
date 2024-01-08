@@ -20,7 +20,7 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var isLoading = false
+    @State private var isLoading = true
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     
     var body: some View {
@@ -52,7 +52,7 @@ struct ContentView: View {
                         .frame(height: 140)
                         
                         NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
-                        NavigationButton(buttonText: "Back", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
+                        NavigationButton(buttonText: "Back", action: { scenarioVM.previousScenario() }, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
                         Spacer()
                     }
                     .padding()

@@ -10,8 +10,9 @@ import SwiftUI
 
 class ScenarioViewModel: ObservableObject {
     @Published private var scenarios: [Scenario]
-    @Published var currentScenarioIndex: Int = 0
-
+    @Published var currentScenarioIndex = 0
+    @Published var previousScenarioIndex = 0
+    
     // intializde with array of scenario items
     init(scenarios: [Scenario]) {
         self.scenarios = scenarios
@@ -23,7 +24,8 @@ class ScenarioViewModel: ObservableObject {
     
     func nextScenario() {
         if currentScenarioIndex < scenarios.count - 1 {
-            currentScenarioIndex += 1
+            previousScenarioIndex = currentScenarioIndex
+            currentScenarioIndex = Int.random(in: 0...19)
         } else {
             currentScenarioIndex = 0
         }
@@ -34,7 +36,7 @@ class ScenarioViewModel: ObservableObject {
             currentScenarioIndex = 1
         }
         if currentScenarioIndex < scenarios.count - 1 {
-            currentScenarioIndex -= 1
+            currentScenarioIndex = previousScenarioIndex
         }
     }
 }
