@@ -22,13 +22,12 @@ extension Color {
 struct ContentView: View {
     @State private var isLoading = false
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
-
     
     var body: some View {
         VStack {
             if isLoading {
                 LoadingView()
-                    .onAppear {
+                    .onAppear{
                     Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { timer in
                         isLoading = false
                         timer.invalidate()
@@ -52,9 +51,8 @@ struct ContentView: View {
                         }
                         .frame(height: 140)
                         
-                        NavigationButton(buttonText: "Next", action: scenarioVM.nextScenario, buttonColor: Color(hex: 0xA8DB))
-                        NavigationButton(buttonText: "Back", action: scenarioVM.previousScenario, buttonColor: Color(hex: 0x1747))
-                        
+                        NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302))
+                        NavigationButton(buttonText: "Back", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302))
                         Spacer()
                     }
                     .padding()
@@ -64,24 +62,33 @@ struct ContentView: View {
     }
 }
 
+struct NavigationButtonStyle: ButtonStyle {
+    var defaultColor: Color
+    var tappedColor: Color
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundColor(.white)
+            .padding(.init(top: 10, leading: 90, bottom: 10, trailing: 90))
+            .background(
+                RoundedRectangle(cornerRadius: 50)
+                    .fill(configuration.isPressed ? tappedColor : defaultColor)
+            )
+    }
+}
+
 struct NavigationButton: View {
-    
     let buttonText: String
     let action: () -> Void
-    let buttonColor: Color?
-    
+    let defaultColor: Color
+    let tappedColor: Color
+
     var body: some View {
-        
         Button(action: action) {
             Text(buttonText)
-                 .fixedSize(horizontal: false, vertical: true)
-                 .foregroundColor(.white)
-                 .padding(.init(top: 10, leading: 90, bottom: 10, trailing: 90))
-                 .background(
-                     RoundedRectangle(cornerRadius: 50)
-                         .fill(buttonColor!)
-                 )
-         }
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .buttonStyle(NavigationButtonStyle(defaultColor: defaultColor, tappedColor: tappedColor))
     }
 }
 
