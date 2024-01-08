@@ -62,6 +62,9 @@ struct ContentView: View {
     }
 }
 
+
+// MARK: - Button Styles
+
 struct NavigationButtonStyle: ButtonStyle {
     var defaultColor: Color
     var tappedColor: Color
@@ -78,6 +81,8 @@ struct NavigationButtonStyle: ButtonStyle {
             )
     }
 }
+
+//MARK: - SubViews
 
 struct NavigationButton: View {
     let buttonText: String
