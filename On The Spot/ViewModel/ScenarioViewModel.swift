@@ -23,11 +23,15 @@ class ScenarioViewModel: ObservableObject {
     }
     
     func nextScenario() {
-        if currentScenarioIndex < scenarios.count - 1 {
+        if scenarios.count > 1 {
+            var newIndex = currentScenarioIndex
+            while newIndex == currentScenarioIndex {
+                newIndex = Int.random(in: 0..<scenarios.count)
+            }
             previousScenarioIndex = currentScenarioIndex
-            currentScenarioIndex = Int.random(in: 0...19)
+            currentScenarioIndex = newIndex
         } else {
-            currentScenarioIndex = 0
+            currentScenarioIndex = 1
         }
     }
     
