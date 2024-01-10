@@ -23,18 +23,35 @@ class ScenarioViewModel: ObservableObject {
     }
     
     func nextScenario() {
-        if scenarios.count > 1 {
-            var newIndex = currentScenarioIndex
-            while newIndex == currentScenarioIndex {
-                newIndex = Int.random(in: 0..<scenarios.count)
-            }
-            previousScenarioIndex = currentScenarioIndex
-            currentScenarioIndex = newIndex
-        } else {
-            currentScenarioIndex = 1
-        }
-    }
+           if scenarios.count > 1 {
+               // Filter out scenarios that have already been displayed
+               let remainingScenarios = scenarios.filter { !$0.previouslyDisplayed }
+               
+               if remainingScenarios.isEmpty {
+                   // Reset the "previouslyDisplayed" flag for all scenarios
+                   for index in scenarios.indices {
+                       scenarios[index].previouslyDisplayed = false
+                   }
+               }
+               
+               var newIndex = currentScenarioIndex
+               
+               // Keep generating a new index until a unique, not-previously-displayed scenario is found
+               repeat {
+                   newIndex = Int.random(in: 0..<scenarios.count)
+               } while scenarios[newIndex].previouslyDisplayed
+               
+               // Mark the scenario as displayed
+               scenarios[newIndex].previouslyDisplayed = true
+               
+               previousScenarioIndex = currentScenarioIndex
+               currentScenarioIndex = newIndex
+           } else {
+               currentScenarioIndex = Int.random(in: 0..<scenarios.count)
+           }
+       }
     
+    // get this isn't what I thought it would be.
     func previousScenario() {
         if currentScenarioIndex <= 0 {
             currentScenarioIndex = 1

@@ -11,4 +11,5 @@ import SwiftUI
 struct Scenario {
     let scenarioID = UUID()
     let question: String
+    var previouslyDisplayed: Bool
 }
