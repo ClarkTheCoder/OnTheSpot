@@ -23,11 +23,15 @@ struct ScenarioBrain {
         Scenario(question: "You are at a bar flirting with a young girl. You ask her age and are almost certain she said 18 but the music is loud and you're both drunk. Do you ask again?"),
         Scenario(question: "The person in front of you drops a $100 bill without noticing. Do you inform them?"),
         Scenario(question: "Your partner is out of town and an ex asks to meet up for drinks. Do you take them up on their offer?"),
-        Scenario(question: "You are at a party and a friend offers you cocaine? You have not done it before. Do you try it once?"),
+        Scenario(question: "You are at a party and a friend offers you pill and claims it will help you relax? Do you try it once?"),
         Scenario(question: "While laying next to your partner in bed watching TikTok you come across a stunning influencer wearing very little clothing. Do you watch the clip?"),
         Scenario(question: "You are at a party and you spill beer on the hosts Xbox. Do you tell them?"),
         Scenario(question: "You are in college with a paper due this Friday. You are enrolled in 5 other courses and are tight on time. Do you use ChatGPT to complete the assignment?"),
         Scenario(question: "You accept a date with a nice person when an even more attractive prospect becomes available. Do you cancel the first date?"),
         Scenario(question: "You match with an attractive friend who your close friend has a big crush on. Do you unmatch?"),
+        Scenario(question: "While out of town for work, you had a one night stand with someone you met at a bar. Do you tell your SO?"),
+        Scenario(question: "You witness a friend cheating on a test. Would you report them to the teacher?"),
+        Scenario(question: "You accidentally damage someone's car in a parking lot. Do you leave a note with your contact information?"),
+        Scenario(question: "A close family member asks for assistance with covering for a hit and run. Nobody was killed, but somebody was injured and taken to the hospital. Do you turn them in?"),
     ]
 }
