@@ -51,7 +51,6 @@ class ScenarioViewModel: ObservableObject {
            }
        }
     
-    // get this isn't what I thought it would be.
     func previousScenario() {
         if currentScenarioIndex <= 0 {
             currentScenarioIndex = 1
