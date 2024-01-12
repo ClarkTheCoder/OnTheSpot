@@ -20,8 +20,9 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var isLoading = true
+    @State private var isLoading = false
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
+    @State var progressValue: Float = 0.0
     
     var body: some View {
         VStack {
@@ -50,9 +51,15 @@ struct ContentView: View {
                                 .foregroundStyle(Color(hex: 0x1747))
                         }
                         .frame(height: 140)
+                        .padding(.bottom, 50)
                         
-                        NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario() }, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
-                        NavigationButton(buttonText: "Back", action: { scenarioVM.previousScenario() }, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
+                        NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario(); progressValue = scenarioVM.updateProgress()}, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
+                        
+                        NavigationButton(buttonText: "Back", action: { scenarioVM.previousScenario(); progressValue = scenarioVM.updateProgress()}, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
+                        Spacer()
+                        ProgressView("", value: progressValue)
+                            .frame(width: 300)
+                            .padding(.bottom, 150)
                         Spacer()
                     }
                     .padding()
@@ -60,6 +67,7 @@ struct ContentView: View {
             }
         }
     }
+    
 }
 
 

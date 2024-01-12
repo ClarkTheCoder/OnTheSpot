@@ -40,7 +40,6 @@ struct ScenarioBrain {
         Scenario(question: "Your partner is out of town and you decide to go dancing with some friends. While dancing, someone is grinding up on you and is showing a large amount of interest. Do you continue to dance with them?", previouslyDisplayed: false),
         Scenario(question: "A nice guy offers to buy you a drink at a bar. You feel no attraction towards him. Do you accept his offer?", previouslyDisplayed: false),
         Scenario(question: "Your son has expressed interest in studying computer science, however his spatial reasoning and math skills are well below average. Do you encourage him regardless?", previouslyDisplayed: false),
-        Scenario(question: "Your son has expressed interest in studying computer science, however his spatial reasoning and math skills are well below average. Do you encourage him regardless?", previouslyDisplayed: false),
         Scenario(question: "Your employer is making you pronouns mandatory in your email signautre. Do you oppose?", previouslyDisplayed: false),
         Scenario(question: "You are selling an item on Facebook Marketplace. One person reaches out saying they'd like to pick it up today. Another person reaches out shortly after saying they can pick up at the same time, and will give you $100 more to sell it to them. Do you take their offer?", previouslyDisplayed: false),
         

@@ -25,9 +25,6 @@ struct LoadingView: View {
                 Text(animatedText)
                     .font(.system(size: 20))
                     .foregroundStyle(.white)
-
-                ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.white))
-                    .padding()
             }
             .onAppear{
                 animateText()

@@ -23,40 +23,27 @@ class ScenarioViewModel: ObservableObject {
     }
     
     func nextScenario() {
-           if scenarios.count > 1 {
-               // Filter out scenarios that have already been displayed
-               let remainingScenarios = scenarios.filter { !$0.previouslyDisplayed }
-               
-               if remainingScenarios.isEmpty {
-                   // Reset the "previouslyDisplayed" flag for all scenarios
-                   for index in scenarios.indices {
-                       scenarios[index].previouslyDisplayed = false
-                   }
-               }
-               
-               var newIndex = currentScenarioIndex
-               
-               // Keep generating a new index until a unique, not-previously-displayed scenario is found
-               repeat {
-                   newIndex = Int.random(in: 0..<scenarios.count)
-               } while scenarios[newIndex].previouslyDisplayed
-               
-               // Mark the scenario as displayed
-               scenarios[newIndex].previouslyDisplayed = true
-               
-               previousScenarioIndex = currentScenarioIndex
-               currentScenarioIndex = newIndex
-           } else {
-               currentScenarioIndex = Int.random(in: 0..<scenarios.count)
-           }
-       }
+          if currentScenarioIndex < scenarios.count - 1  {
+              // If all scenarios have been shown at least once, reset the se
+              previousScenarioIndex = currentScenarioIndex
+              currentScenarioIndex += 1
+          } else {
+              currentScenarioIndex = 0
+          }
+      }
     
     func previousScenario() {
         if currentScenarioIndex <= 0 {
             currentScenarioIndex = 1
         }
         if currentScenarioIndex < scenarios.count - 1 {
-            currentScenarioIndex = previousScenarioIndex
+            currentScenarioIndex = currentScenarioIndex - 1
         }
     }
+    
+    func updateProgress() -> Float {
+            let totalScenarios = Float(scenarios.count)
+            let progressValue = Float(currentScenarioIndex + 1) / totalScenarios
+            return progressValue
+        }
 }
