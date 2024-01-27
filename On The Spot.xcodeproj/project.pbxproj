@@ -14,7 +14,7 @@
 		670C6AEB2B3BFD24002F9EEB /* ScenarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */; };
 		67459ADC2B49AEB900CF71C6 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67459ADB2B49AEB900CF71C6 /* Pacifico-Regular.ttf */; };
 		676AF1CB2B3C0AA0009CD98B /* ScenarioBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */; };
-		6775E09B2B64B8D600F4A7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6775E09A2B64B8D600F4A7A8 /* Assets.xcassets */; };
+		678CD0CB2B64BCBA00590B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678CD0CA2B64BCBA00590B63 /* Assets.xcassets */; };
 		67CBD4F22B49C426009C390D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBD4F12B49C426009C390D /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 		67459ADB2B49AEB900CF71C6 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		67459ADD2B49B0B100CF71C6 /* On-The-Spot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "On-The-Spot-Info.plist"; sourceTree = SOURCE_ROOT; };
 		676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioBrain.swift; sourceTree = "<group>"; };
-		6775E09A2B64B8D600F4A7A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		678CD0CA2B64BCBA00590B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Desktop/Assets.xcassets; sourceTree = "<group>"; };
 		67CBD4F12B49C426009C390D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,8 +76,8 @@
 		670C6ADD2B3BFA32002F9EEB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				6775E09A2B64B8D600F4A7A8 /* Assets.xcassets */,
 				670C6ADE2B3BFA32002F9EEB /* Preview Assets.xcassets */,
+				678CD0CA2B64BCBA00590B63 /* Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67459ADC2B49AEB900CF71C6 /* Pacifico-Regular.ttf in Resources */,
-				6775E09B2B64B8D600F4A7A8 /* Assets.xcassets in Resources */,
+				678CD0CB2B64BCBA00590B63 /* Assets.xcassets in Resources */,
 				670C6ADF2B3BFA32002F9EEB /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +336,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +368,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
