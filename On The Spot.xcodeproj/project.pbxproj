@@ -13,8 +13,8 @@
 		670C6AE82B3BFBE9002F9EEB /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C6AE72B3BFBE9002F9EEB /* Scenario.swift */; };
 		670C6AEB2B3BFD24002F9EEB /* ScenarioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */; };
 		67459ADC2B49AEB900CF71C6 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67459ADB2B49AEB900CF71C6 /* Pacifico-Regular.ttf */; };
-		6745E5802B4EB1E800C6F058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6745E57F2B4EB1E800C6F058 /* Assets.xcassets */; };
 		676AF1CB2B3C0AA0009CD98B /* ScenarioBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */; };
+		6775E09B2B64B8D600F4A7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6775E09A2B64B8D600F4A7A8 /* Assets.xcassets */; };
 		67CBD4F22B49C426009C390D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CBD4F12B49C426009C390D /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +27,8 @@
 		670C6AEA2B3BFD24002F9EEB /* ScenarioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioViewModel.swift; sourceTree = "<group>"; };
 		67459ADB2B49AEB900CF71C6 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		67459ADD2B49B0B100CF71C6 /* On-The-Spot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "On-The-Spot-Info.plist"; sourceTree = SOURCE_ROOT; };
-		6745E57F2B4EB1E800C6F058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		676AF1CA2B3C0AA0009CD98B /* ScenarioBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenarioBrain.swift; sourceTree = "<group>"; };
+		6775E09A2B64B8D600F4A7A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67CBD4F12B49C426009C390D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,6 @@
 				670C6AE92B3BFD10002F9EEB /* ViewModel */,
 				670C6AE62B3BFBC9002F9EEB /* Model */,
 				670C6AE52B3BFBB5002F9EEB /* Views */,
-				6745E57F2B4EB1E800C6F058 /* Assets.xcassets */,
 				670C6ADD2B3BFA32002F9EEB /* Preview Content */,
 			);
 			path = "On The Spot";
@@ -77,6 +76,7 @@
 		670C6ADD2B3BFA32002F9EEB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				6775E09A2B64B8D600F4A7A8 /* Assets.xcassets */,
 				670C6ADE2B3BFA32002F9EEB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -175,8 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				67459ADC2B49AEB900CF71C6 /* Pacifico-Regular.ttf in Resources */,
+				6775E09B2B64B8D600F4A7A8 /* Assets.xcassets in Resources */,
 				670C6ADF2B3BFA32002F9EEB /* Preview Assets.xcassets in Resources */,
-				6745E5802B4EB1E800C6F058 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -308,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -324,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"On The Spot/Preview Content\"";
 				DEVELOPMENT_TEAM = KYS955CYLL;
 				ENABLE_PREVIEWS = YES;
@@ -336,7 +336,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"On The Spot/Preview Content\"";
 				DEVELOPMENT_TEAM = KYS955CYLL;
 				ENABLE_PREVIEWS = YES;
@@ -368,7 +368,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

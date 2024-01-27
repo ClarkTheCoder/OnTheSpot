@@ -20,7 +20,7 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var isLoading = false
+    @State private var isLoading = true
     @ObservedObject var scenarioVM = ScenarioViewModel(scenarios: ScenarioBrain().scenarioArray)
     @State var progressValue: Float = 0.0
     
