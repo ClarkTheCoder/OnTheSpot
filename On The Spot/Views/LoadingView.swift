@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoadingView: View {
-    let textToType = "It's about to get uncomfortable.."
+    let textToType = "It's about to get uncomfortable..."
     @State private var animatedText: String = ""
     
     var body: some View {
