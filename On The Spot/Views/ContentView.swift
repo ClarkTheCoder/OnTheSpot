@@ -56,9 +56,11 @@ struct ContentView: View {
                         NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario(); progressValue = scenarioVM.updateProgress()}, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
                         
                         NavigationButton(buttonText: "Back", action: { scenarioVM.previousScenario(); progressValue = scenarioVM.updateProgress()}, defaultColor: Color(hex: 0x1747), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
+
                         ProgressView("", value: progressValue)
                             .frame(width: 300)
                             .padding(.bottom, 150)
+                            .tint(Color(hex: 0x1747))
                         Spacer()
                     }
                     .padding()
