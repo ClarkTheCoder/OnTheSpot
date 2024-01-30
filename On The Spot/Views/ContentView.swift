@@ -29,7 +29,7 @@ struct ContentView: View {
             if isLoading {
                 LoadingView()
                     .onAppear{
-                    Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { timer in
+                    Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
                         isLoading = false
                         timer.invalidate()
                     }
