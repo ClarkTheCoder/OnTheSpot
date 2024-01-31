@@ -47,10 +47,10 @@ struct ContentView: View {
                             .foregroundStyle(Color(hex: 0x1747))
                         VStack {
                             Text(scenarioVM.currentScenario.question)
-                                .padding(.horizontal, 30)
+                                .padding(.horizontal, 20)
                                 .foregroundStyle(Color(hex: 0x1747))
                         }
-                        .frame(height: 140)
+                        .frame(height: 160)
                         .padding(.bottom, 50)
                         
                         NavigationButton(buttonText: "Next", action: { scenarioVM.nextScenario(); progressValue = scenarioVM.updateProgress()}, defaultColor: Color(hex: 0xA8DB), tappedColor: Color(hex: 0xFFE302), textColorDefault: .white, textColorTapped: Color(hex: 0x1747))
